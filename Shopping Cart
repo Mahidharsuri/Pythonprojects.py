@@ -1,0 +1,22 @@
+#Shopping cart program
+things=[]
+prices=[]
+total=0
+
+while True:
+    thing=input("enter a thing to buy (q to quit) : ")
+    if thing.lower() == "q":
+        break
+    else:
+        price=float(input(f"enter the price of {thing}: $"))
+        things.append(thing)
+        prices.append(price)
+
+print("----- Your Cart -----")
+
+for thing in things:
+    print(thing,end=' ')
+for price in prices:
+    total+=price
+print()
+print(f"total price is: ${total}")
