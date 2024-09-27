@@ -1,0 +1,25 @@
+#compound calculator
+
+amount=0
+rate=0
+time=0
+
+while amount<=0:
+    amount=int(input('enter a number: '))
+    if amount<=0:
+        print('amount cant less than are equal ro zero')
+
+while rate<=0:
+    rate=int(input('enter a number: '))
+    if rate<=0:
+        print('rate cant less than are equal ro zero')
+
+while time<=0:
+    time=int(input('enter a number: '))
+    if time<=0:
+        print('time cant less than are equal ro zero')
+
+total=amount*pow((1+rate/100),time)
+
+print(f'total ${amount} with interest {rate} % '
+      f'duration in years {time} ={total} ')
