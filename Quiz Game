@@ -1,0 +1,50 @@
+#Quiz Game
+
+questions=("how many days in a year? ",
+           "how many weeks in a year?",
+           "how many days in a week?",
+           "how many hours in a day ?",
+           "how many minutes in an hour?")
+options=(("A.365","B.344","C.366","D.375"),
+         ("A.41","B.43","C.52","D.34"),
+         ("A.6","B.4","C.5","D.7"),
+         ("A.32","B.26","C.24","D.22"),
+         ("A.56","B.66","C.60","D.43"))
+
+answers=("A","C","D","C","C")
+guesses=[]
+score=0
+question_num=0
+
+for question in questions:
+    print("-------------------------------------")
+    print(question)
+    for option in options[question_num]:
+        print(option)
+
+    guess=input("Enter (A,B,C,D): ").upper()
+    guesses.append(guess)
+    if guess==answers[question_num]:
+        print("correct")
+        #score+=1
+        print(score)
+    else:
+        print("incorrect!")
+        print(f"Correct answer is {answers[question_num]}")
+
+    question_num+=1
+
+print("-------------------------------------")
+print("    YOUR RESULT    ")
+print("-------------------------------------")
+print("your answers:")
+for answer in answers:
+    print(answer,end=" ")
+print()
+print("your guesses:")
+for guess in guesses:
+    print(guess,end=" ")
+print()
+
+score=(score/len(questions)*100)
+print(f"your score is : {score}%")
