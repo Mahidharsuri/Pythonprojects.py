@@ -1,0 +1,32 @@
+import random
+
+low=2
+high=20
+answer= random.randint(low,high)
+guesses=0
+is_running=True
+
+print("python number guessing game")
+print(f"please select the number between {low} and {high}")
+
+while is_running:
+    guess= input("Enter Your Guess :")
+
+    if guess.isdigit():
+        guess=int(guess)
+        guesses+=1
+
+        if guess < low or guess> high:
+            print("The number is out of range")
+            print(f"please enter a number between {low} and {high}")
+        elif guess> answer:
+            print("your guess is Too High !. Try Again ")
+        elif guess< answer:
+            print("Your guess is Too Low !. Try Again ")
+        else:
+            print("Correct !")
+            print(f"Number of guesses : {guesses}")
+            is_running=False
+    else:
+        print("Invalid !")
+        print(f"please enter a number between {low} and {high}")
