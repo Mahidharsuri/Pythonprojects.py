@@ -1,0 +1,33 @@
+import random
+
+options=("rock","paper","scissor")
+
+playing=True
+
+while playing:
+    player = None
+    opponent = random.choice(options)
+    while player not  in options:
+       player=input("enter a choice (rock,paper,scissor) :")
+    print(f" player : {player}")
+    print(f" opponent : {opponent}")
+
+    if player==opponent:
+        print("It's a tie")
+    elif player== "rock" and opponent=="scissor":
+        print("You win")
+    elif player== "paper" and opponent=="rock":
+        print("You win")
+    elif player== "scissor" and opponent=="paper":
+        print("You win")
+
+    else:
+        print(f"you lose. opponent wins")
+
+    #play_again=input("play again?(y/n) :").lower()
+    #if not play_again=="y":
+    #TZhis also works without creating a variable
+    if not input("play again ? (y/n) :").lower()=="y":
+        playing=False
+
+print("Thanks for playing")
