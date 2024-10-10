@@ -1,0 +1,70 @@
+import random
+# ● ┌ ─ ┐ │ └ ┘ using this characters to create a dice 
+
+"┌─────────┐"
+"│         │"
+"│         │"
+"│         │"
+"└─────────┘"
+
+dice_art={
+    1:("┌─────────┐",
+       "│         │",
+       "│    ●    │",
+       "│         │",
+       "└─────────┘"),
+    2:("┌─────────┐",
+       "│  ●      │",
+       "│         │",
+       "│      ●  │",
+       "└─────────┘"),
+    3:("┌─────────┐",
+       "│  ●      │",
+       "│    ●    │",
+       "│      ●  │",
+       "└─────────┘"),
+    4:("┌─────────┐",
+       "│  ●   ●  │",
+       "│         │",
+       "│  ●   ●  │",
+       "└─────────┘"),
+    5:("┌─────────┐",
+       "│  ●   ●  │",
+       "│    ●    │",
+       "│  ●   ●  │",
+       "└─────────┘"),
+    6:("┌─────────┐",
+       "│  ●   ●  │",
+       "│  ●   ●  │",
+       "│  ●   ●  │",
+       "└─────────┘")
+}
+
+
+dice=[]
+total=0
+num_dice=int(input("How Many Dice ? :"))
+for die in range(num_dice):
+    dice.append(random.randint(1,6))
+#for die in range(num_dice):
+ #   for line in (dice_art.get(dice[die])):
+  #      print(line)
+
+for i in range (5):
+    for die in dice:
+        print(dice_art.get(die)[i],end=' ')
+    print()
+for div in dice:
+    total+=div
+print(dice)
+print(total)
+
+Output:
+How Many Dice ? :2
+┌─────────┐ ┌─────────┐ 
+│  ●   ●  │ │  ●   ●  │ 
+│  ●   ●  │ │         │ 
+│  ●   ●  │ │  ●   ●  │ 
+└─────────┘ └─────────┘ 
+[6, 4]
+10
