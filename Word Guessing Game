@@ -1,0 +1,53 @@
+#Import random to Shuffle
+import random
+
+
+words = ['rainbow', 'computer', 'science', 'programming',
+         'python', 'mathematics', 'player', 'condition',
+         'reverse', 'water', 'board', 'geeks']
+word=random.choice(words)
+#Instal an Empty List to store characters
+gess_word=[]
+#Use counter to count the Guesses
+guesses=0
+x=int(input("Enter how may guesses u want:"))
+#Using loops to loop the program
+while guesses < x:
+    #Use counter to count the wrong guesses
+    guessed=0
+    for char in word:
+        if char in gess_word:
+            print(char,end='')
+
+        else:
+            print("_",end='')
+            guessed+=1
+
+    print()
+    print()
+    if guessed==0:
+        print("You win !")
+        print(f"The word is : {word}")
+        print(f"Number of guesses: {guesses}")
+        break
+
+
+    guess=input("Enter a character: ")
+    #guess is added to empty list
+    gess_word+=guess
+    guesses += 1
+
+    if guess not in word:
+
+        print("Wrong!")
+        n= x - guesses
+        print(f'You have remaining {n} in {x} guesses !')
+        print()
+
+        if guesses == x:
+            print("You Loose !")
+            print("Thanks for playing")
+
+
+
+
