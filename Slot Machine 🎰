@@ -33,7 +33,7 @@ def main():
     balance=100
 
     print("**************************")
-    print("Welcome to python Slots ")
+    print("Welcome to python  Slots ")
     print("symbols : ❤️ 😍 😂 😊 🙌 ")
     print("**************************")
 
