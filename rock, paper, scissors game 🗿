@@ -8,7 +8,7 @@ while playing:
     player = None
     opponent = random.choice(options)
     while player not  in options:
-       player=input("enter a choice (rock,paper,scissor) :")
+       player=input("enter a choice (rock,paper,scissor) :") 
     print(f" player : {player}")
     print(f" opponent : {opponent}")
 
