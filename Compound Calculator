@@ -5,7 +5,7 @@ rate=0
 time=0
 
 while amount<=0:
-    amount=int(input('enter a number: '))
+    amount=int(input('enter a number: ')) 
     if amount<=0:
         print('amount cant less than are equal ro zero')
 
