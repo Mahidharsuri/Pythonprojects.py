@@ -1,6 +1,6 @@
 #concession stand program
 
-menu={"popcorn":300,
+menu={"popcorn":300, 
       "coke":100,
       "thumbsup":100,
       "apple juice":50,
