@@ -23,7 +23,7 @@ def get_payout(row,bet):
         if row[0]=='😂':
             return bet * 6
         if row[0]=='😊':
-            return bet * 8
+            return bet * 8 
         if row[0]=='🙌':
             return bet * 10
     return 0
